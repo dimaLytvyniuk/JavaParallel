@@ -46,9 +46,15 @@ public class RunMatrixHalfMultiply implements Runnable {
                 for (int j = 0; j < k; j++)
                 {
                     MResult[i][j] = 0;
+                    double c = 0;
+                    double y = 0;
+                    double p = 0;
                     for (int r = 0; r < n; r++)
                     {
-                        MResult[i][j] += M1[i][r] * M2[r][j];
+                        y = (M1[i][r] * M2[r][j]) - c ;
+                        p = MResult[i][j] + y;
+                        c = (p - MResult[i][j]) - y;
+                        MResult[i][j] = p;
                     }
                 }
             }
@@ -60,9 +66,15 @@ public class RunMatrixHalfMultiply implements Runnable {
                 for (int j = k; j < n; j++)
                 {
                     MResult[i][j] = 0;
+                    double c = 0;
+                    double y = 0;
+                    double p = 0;
                     for (int r = 0; r < n; r++)
                     {
-                        MResult[i][j] += M1[i][r] * M2[r][j];
+                        y = (M1[i][r] * M2[r][j]) - c ;
+                        p = MResult[i][j] + y;
+                        c = (p - MResult[i][j]) - y;
+                        MResult[i][j] = p;
                     }
                 }
             }
@@ -81,9 +93,15 @@ public class RunMatrixHalfMultiply implements Runnable {
                 for (int j = k; j < n; j++)
                 {
                     MResult[i][j] = 0;
+                    double c = 0;
+                    double y = 0;
+                    double p = 0;
                     for (int r = 0; r < n; r++)
                     {
-                        MResult[i][j] += M1[i][r] * M2[r][j];
+                        y = (M1[i][r] * M2[r][j]) - c ;
+                        p = MResult[i][j] + y;
+                        c = (p - MResult[i][j]) - y;
+                        MResult[i][j] = p;
                     }
                 }
             }
@@ -95,9 +113,15 @@ public class RunMatrixHalfMultiply implements Runnable {
                 for (int j = 0; j < k; j++)
                 {
                     MResult[i][j] = 0;
+                    double c = 0;
+                    double y = 0;
+                    double p = 0;
                     for (int r = 0; r < n; r++)
                     {
-                        MResult[i][j] += M1[i][r] * M2[r][j];
+                        y = (M1[i][r] * M2[r][j]) - c ;
+                        p = MResult[i][j] + y;
+                        c = (p - MResult[i][j]) - y;
+                        MResult[i][j] = p;
                     }
                 }
             }
